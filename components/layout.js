@@ -5,7 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
 const name = "Varala Sanjay Reddy";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Next.js Sample Website checkimg here fpr preview 1";
 
 export default function Layout({ children, home }) {
   return (
@@ -13,19 +13,16 @@ export default function Layout({ children, home }) {
       <Head>
         <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="ABC Blabla 2020 Friday" />
+        <meta property="og:title" content="Website name" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://bla123.neocities.org/mp/friday.html"
+          content="https://unsplash.com/photos/G85VuTpw6jg"
         />
-        <meta property="og:description" content="Photo Album" />
-        <meta
-          property="og:image"
-          itemprop="image"
-          content="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:locale" content="en_GB" />
+        <meta property="og:description" content="Website description" />
+        <meta property="og:image" content="image.png" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="600" />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -62,24 +59,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>
-        {children}
-        <link
-          itemprop="thumbnailUrl"
-          href="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
-        />
-
-        <span
-          itemprop="thumbnail"
-          itemscope
-          itemtype="http://schema.org/ImageObject"
-        >
-          <link
-            itemprop="url"
-            href="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
-          />
-        </span>
-      </main>
+      <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
