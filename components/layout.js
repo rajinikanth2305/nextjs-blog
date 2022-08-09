@@ -17,11 +17,17 @@ export default function Layout({ children, home }) {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://unsplash.com/photos/G85VuTpw6jg"
+          content="https://indiahikes.com"
         />
         <meta property="og:description" content="Website description" />
-        <meta property="og:image" content="image.png" />
-		<meta property="og:image:alt" content="description of image not showing" />
+        <meta
+          property="og:image"
+          content="https://unsplash.com/photos/G85VuTpw6jg"
+        />
+        <meta
+          property="og:image:alt"
+          content="description of image not showing"
+        />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="600" />
       </Head>
