@@ -11,20 +11,21 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
-	  <title>{siteTitle}</title>
+        <title>{siteTitle}</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="ABC Blabla 2020 Friday" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          property="og:url"
+          content="https://bla123.neocities.org/mp/friday.html"
         />
+        <meta property="og:description" content="Photo Album" />
         <meta
           property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          itemprop="image"
+          content="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
         />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="en_GB" />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -61,7 +62,24 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main>
+        {children}
+        <link
+          itemprop="thumbnailUrl"
+          href="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
+        />
+
+        <span
+          itemprop="thumbnail"
+          itemscope
+          itemtype="http://schema.org/ImageObject"
+        >
+          <link
+            itemprop="url"
+            href="https://bla123.neocities.org/mp/images/thumbs/IMG_327.JPG"
+          />
+        </span>
+      </main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
