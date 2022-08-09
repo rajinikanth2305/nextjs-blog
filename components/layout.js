@@ -21,6 +21,7 @@ export default function Layout({ children, home }) {
         />
         <meta property="og:description" content="Website description" />
         <meta property="og:image" content="image.png" />
+		<meta property="og:image:alt" content="description of image not showing" />
         <meta property="og:image:width" content="600" />
         <meta property="og:image:height" content="600" />
       </Head>
